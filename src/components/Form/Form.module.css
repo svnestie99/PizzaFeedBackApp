@@ -1,0 +1,95 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  align-items: center;
+  border: 2px solid #333;
+  padding: 30px;
+  font-family: cursive;
+}
+
+.person {
+  font-family: cursive;
+  font-size: 20px;
+  width: 190px;
+  border-bottom: 1px solid black;
+}
+.phone {
+  font-family: cursive;
+  font-size: 18px;
+  border: none;
+  width: 190px;
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
+  font-family: cursive;
+}
+.comment {
+  font-family: cursive;
+  font-size: 18px;
+  border: none;
+  max-width: 190px;
+  min-width: 190px;
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
+}
+.btn {
+  font-family: cursive;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: 2px solid #333;
+  border-radius: 40px;
+  background: none;
+  padding: 5px 70px;
+  transition: 0.8s;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.btn:hover {
+  transition: 0.8s;
+  background-color: #333;
+  color: white;
+}
+.error {
+  font-size: 16px;
+  color: red;
+  text-align: center;
+}
+.ratingArea {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.ratingArea:not(:checked) > input {
+  display: none;
+}
+.ratingArea:not(:checked) > label {
+  float: right;
+  width: 42px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 32px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+.ratingArea:not(:checked) > label:before {
+  content: "★";
+}
+.ratingArea > input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+.ratingArea:not(:checked) > label:hover,
+.ratingArea:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+.ratingArea > input:checked + label:hover,
+.ratingArea > input:checked + label:hover ~ label,
+.ratingArea > input:checked ~ label:hover,
+.ratingArea > input:checked ~ label:hover ~ label,
+.ratingArea > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+.ratingArea > label:active {
+  position: relative;
+}

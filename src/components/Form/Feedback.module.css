@@ -1,0 +1,69 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  align-items: center;
+  border: 2px solid #333;
+  padding: 30px;
+  font-family: cursive;
+}
+.person {
+  font-family: cursive;
+  font-size: 20px;
+  width: 190px;
+  border-bottom: 1px solid black;
+}
+.phone {
+  font-family: cursive;
+  font-size: 18px;
+  border: none;
+  width: 190px;
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
+  font-family: cursive;
+}
+.commentIsReady {
+  font-family: cursive;
+  font-size: 18px;
+  border: none;
+  width: 190px;
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
+}
+.deleteBtn {
+  font-family: cursive;
+  font-size: 15px;
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
+  border: 2px solid #333;
+  border-radius: 40px;
+  background: none;
+  padding: 5px 70px;
+  transition: 0.8s;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.deleteBtn:hover {
+  transition: 0.8s;
+  background-color: #333;
+  color: red;
+}
+.ratingArea {
+  margin: 15px 0px;
+}
+.ratingArea > label {
+  float: right;
+  width: 42px;
+  padding: 0;
+  font-size: 32px;
+  line-height: 32px;
+  color: gold;
+  text-shadow: 1px 1px #bbb;
+}
+.ratingArea:not(:checked) > input {
+  display: none;
+}
+.ratingArea:not(:checked) > label:before {
+  content: "★";
+}
